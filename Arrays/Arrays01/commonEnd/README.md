@@ -6,4 +6,4 @@ Given 2 arrays of ints, a and b, return true if they have the same first element
 
 commonEnd([1, 2, 3], [7, 3]) → true
 commonEnd([1, 2, 3], [7, 3, 2]) → false
-commonEnd([1, 2, 3], [1, 3]) → true
+commonEnd([1, 2, 3], [1, 3]) → true  

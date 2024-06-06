@@ -13,5 +13,5 @@ public int[] maxEnd3(int[] nums) {
    nums[1]=max;
    nums[2]=max;
    
-   return nums;
+   return nums; 
 }

@@ -6,4 +6,5 @@ public boolean sameFirstLast(int[] nums) {
     return true;
   } else 
     return false;
-}
+} 
+ 

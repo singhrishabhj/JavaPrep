@@ -6,4 +6,5 @@ public int[] reverse3(int[] nums) {
   nums[2]=x;
   
   return nums;
-}
+} 
+ 

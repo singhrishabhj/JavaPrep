@@ -3,4 +3,4 @@ public boolean firstLast6(int[] nums) {
     return true;
   }else 
   return false;
-}
+}  

@@ -4,4 +4,4 @@ public boolean commonEnd(int[] a, int[] b) {
     return true;
   }else 
   return false;
-}
+} 
