@@ -14,3 +14,16 @@ public int maxTriple(int[] nums) {
   return z;
   
 }
+
+
+//using ternary operator
+public int maxTriple(int[] nums) {
+  
+ int x =nums[0];
+  int y = nums[nums.length/2];
+  int z =nums[nums.length-1];
+   
+  
+int ans = x>y?x>z?x:z:y>z?y:z; //x=x>z?x:z ,y= y>z?y:z
+return ans;
+}
