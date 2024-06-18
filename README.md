@@ -13,7 +13,7 @@ Usefull git command:
 git pull
 git status 
 git add.
-ls
+ls-listing 
 git status
 git commit -m "Your-text-message "
 git status
