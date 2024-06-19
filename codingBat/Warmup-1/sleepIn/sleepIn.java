@@ -14,4 +14,3 @@ public boolean sleepIn(boolean weekday, boolean vacation) {
   else 
   return false;
 }
-
