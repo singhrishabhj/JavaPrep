@@ -24,4 +24,4 @@ git push
 --add comments for code explanation
 git pull --rebase -> to update the remote changes to local
 
-this repo is for basic idea of java 
+this repo is for basic idea of java and the practical application use
