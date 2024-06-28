@@ -25,3 +25,5 @@ git push
 git pull --rebase -> to update the remote changes to local
 
 this repo is for basic idea of java and the practical application use
+
+Resuming this module on 29 jun 24
