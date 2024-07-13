@@ -5,9 +5,9 @@
 
 public int diff21(int n) {
   if(n<=21)
-  return 21-n; 
+   return 21-n; 
   else
-  return (n-21)*2; //if number is over 21 , we have to return the double of the difference
+   return (n-21)*2; //if number is over 21 , we have to return the double of the difference
 }
 
 
