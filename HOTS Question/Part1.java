@@ -1,0 +1,128 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+// THis class is representing a Shape
+abstract class Shape {
+// Method to get the number of corners
+    public abstract int getNumberOfCorners();
+
+// Method to calculate the area
+    public abstract double getArea();
+}
+
+// THis class is for a Rectangle
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public int getNumberOfCorners() {
+        return 4; // A rectangle has 4 corners
+    }
+
+    public double getArea() {
+        return width * height;
+    }
+}
+
+// Class for a Circle
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public int getNumberOfCorners() {
+        return 0; // As circle has no corners
+    }
+
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Class for a Triangle
+class Triangle extends Shape {
+    private double base;
+    private double height;
+
+    public Triangle(double base, double height) {
+        this.base = base; 
+        this.height = height;
+    }
+
+    public int getNumberOfCorners() {
+        return 3; // A triangle has 3 corners
+    }
+
+    public double getArea() {
+        return 0.5 * base * height; //using 1/2*b*h
+    }
+}
+
+// Main class to demonstrate the functionality 
+public class ShapeLibrary {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        List<Shape> shapes = new ArrayList<>();
+
+        // Input and shapes
+        System.out.println("Enter the number of shapes:");
+        int numShapes = scanner.nextInt();
+        for (int i = 0; i < numShapes; i++) {
+            System.out.println("Enter the type of shape (rectangle/circle/triangle):");
+            String type = scanner.next().toLowerCase();
+
+            switch (type) {
+                // if input is rectangle 
+                case "rectangle":
+                    System.out.println("Enter width :");
+                    double width = scanner.nextDouble();
+                    System.out.println("Enter height :");
+                    double height = scanner.nextDouble();
+                    shapes.add(new Rectangle(width, height));
+                    break;
+
+                    // if input is circle
+                case "circle":
+                    System.out.println("Enter radius:");
+                    double radius = scanner.nextDouble();
+                    shapes.add(new Circle(radius));
+                    break;
+
+                    //if input is triangle
+                case "triangle":
+                    System.out.println("Enter triangle base :");
+                    double base = scanner.nextDouble();
+                    System.out.println("Enter triangle height :");
+                    double triHeight = scanner.nextDouble();
+                    shapes.add(new Triangle(base, triHeight));
+                    break;
+
+                default:
+                    System.out.println("Unknown shape type.");
+                    break;
+            }
+        }
+
+        // Calculate total number of corners and total area
+        int totalCorners = 0;
+        double totalArea = 0.0;
+        for (Shape shape : shapes) {
+            totalCorners += shape.getNumberOfCorners();
+            totalArea += shape.getArea();
+        }
+
+        // Output results
+        System.out.println("Total number of corners: " + totalCorners);
+        System.out.println("Total area: " + totalArea);
+
+        scanner.close();
+    }
+}
