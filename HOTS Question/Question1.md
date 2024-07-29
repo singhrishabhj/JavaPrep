@@ -6,7 +6,8 @@ We need to create a library to represent shapes and their properties. The librar
 - Total number of corners
 - Total area
 
-**Learnig :**
+**Learning :**
+
 - Object-Oriented Programming (OOP)
 - Dynamic and Extensible
 - Modular Programming
