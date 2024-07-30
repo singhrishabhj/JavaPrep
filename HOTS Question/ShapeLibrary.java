@@ -2,6 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// Add a capability to have a color to the shape
+// Following colors are valid:
+// RED, GREEN and BLUE
+// if color is RED, then the shape's area becomes twice
+// if color is BLUE, the shape's area becomes half
+// if color is GREEN, the area is not changed.
+// This should not change existing classes and interfaces which are part of the library.
+// Library contains Shape, ShapeI, Rectangle, Circle, Triangle and ShapeCollectionI, ShapeCollection
+
 // THis class is representing a Shape
 abstract class Shape implements ShapeI {
 // Method to get the number of corners
@@ -20,6 +29,11 @@ interface ShapeI {
     int getNumberOfCorners();
     double getArea();
     String getPrettyName();
+}
+
+interface ShapeCollectionI {
+    int getTotalNumberOfCorners();
+    double getTotalArea();
 }
 
 // THis class is for a Rectangle
@@ -77,11 +91,38 @@ class Triangle extends Shape {
     }
 }
 
+class ShapeCollection implements ShapeCollectionI {
+    List<ShapeI> shapes = new ArrayList<>();
+    int totalCorners = 0; //shapeCollection.getTotalNumberOfCorners();
+    double totalArea = 0.0; //shapeCollection.getTotalArea();
+    
+    public int getTotalNumberOfCorners() {
+	return totalCorners;
+    }
+
+    public double getTotalArea() {
+	return totalArea;
+    }
+
+    public void add(ShapeI shape) {
+	this.shapes.add(shape);
+    }
+
+    public void compute() {
+        for (ShapeI shape : shapes) {
+	    System.out.println("Processing shape : " + shape.getPrettyName());
+            totalCorners += shape.getNumberOfCorners();
+            totalArea += shape.getArea();
+        }
+    }
+}
+
+
 // Main class to demonstrate the functionality 
 public class ShapeLibrary {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<ShapeI> shapes = new ArrayList<>();
+	ShapeCollection shapeCollection = new ShapeCollection();
 
         // Input and shapes
         System.out.println("Enter the number of shapes:");
@@ -97,14 +138,14 @@ public class ShapeLibrary {
                     double width = scanner.nextDouble();
                     System.out.println("Enter height :");
                     double height = scanner.nextDouble();
-                    shapes.add(new Rectangle(width, height));
+                    shapeCollection.add(new Rectangle(width, height));
                     break;
 
                     // if input is circle
                 case "circle":
                     System.out.println("Enter radius:");
                     double radius = scanner.nextDouble();
-                    shapes.add(new Circle(radius));
+                    shapeCollection.add(new Circle(radius));
                     break;
 
                     //if input is triangle
@@ -113,7 +154,7 @@ public class ShapeLibrary {
                     double base = scanner.nextDouble();
                     System.out.println("Enter triangle height :");
                     double triHeight = scanner.nextDouble();
-                    shapes.add(new Triangle(base, triHeight));
+                    shapeCollection.add(new Triangle(base, triHeight));
                     break;
 
                 default:
@@ -123,15 +164,10 @@ public class ShapeLibrary {
         }
 
         scanner.close();
+	shapeCollection.compute();
         // Calculate total number of corners and total area
-        int totalCorners = 0;
-        double totalArea = 0.0;
-        for (ShapeI shape : shapes) {
-	    System.out.println("Processing shape : " + shape.getPrettyName());
-            totalCorners += shape.getNumberOfCorners();
-            totalArea += shape.getArea();
-        }
-
+        int totalCorners = shapeCollection.getTotalNumberOfCorners();
+        double totalArea = shapeCollection.getTotalArea();
         // Output results
         System.out.println("Total number of corners: " + totalCorners);
         System.out.println("Total area: " + totalArea);
