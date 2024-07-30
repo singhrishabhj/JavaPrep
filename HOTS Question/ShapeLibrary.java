@@ -3,12 +3,23 @@ import java.util.List;
 import java.util.Scanner;
 
 // THis class is representing a Shape
-abstract class Shape {
+abstract class Shape implements ShapeI {
 // Method to get the number of corners
     public abstract int getNumberOfCorners();
 
 // Method to calculate the area
     public abstract double getArea();
+
+    public String getPrettyName() {
+	// class Circle shape with total area 3.141593
+	return String.format("%s with total area %f", this.getClass().getName(), this.getArea());
+    }
+}
+
+interface ShapeI {
+    int getNumberOfCorners();
+    double getArea();
+    String getPrettyName();
 }
 
 // THis class is for a Rectangle
@@ -70,7 +81,7 @@ class Triangle extends Shape {
 public class ShapeLibrary {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<Shape> shapes = new ArrayList<>();
+        List<ShapeI> shapes = new ArrayList<>();
 
         // Input and shapes
         System.out.println("Enter the number of shapes:");
@@ -111,10 +122,12 @@ public class ShapeLibrary {
             }
         }
 
+        scanner.close();
         // Calculate total number of corners and total area
         int totalCorners = 0;
         double totalArea = 0.0;
-        for (Shape shape : shapes) {
+        for (ShapeI shape : shapes) {
+	    System.out.println("Processing shape : " + shape.getPrettyName());
             totalCorners += shape.getNumberOfCorners();
             totalArea += shape.getArea();
         }
@@ -122,7 +135,5 @@ public class ShapeLibrary {
         // Output results
         System.out.println("Total number of corners: " + totalCorners);
         System.out.println("Total area: " + totalArea);
-
-        scanner.close();
     }
 }
