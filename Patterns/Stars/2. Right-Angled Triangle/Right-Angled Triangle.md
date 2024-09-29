@@ -1,0 +1,7 @@
+# Right-Angled Triangle
+
+*
+**
+***
+****
+*****
