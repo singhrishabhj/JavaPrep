@@ -24,7 +24,7 @@ public class FallingStars {
                 str += 2;  // Increase stars
                 sp--;      // Decrease spaces
             } else {
-                str -= 2;  // Decrease stars
+                str - = 2;  // Decrease stars
                 sp++;      // Increase spaces
             }
             System.out.println(); // Move to the next line
