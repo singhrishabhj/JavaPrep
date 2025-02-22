@@ -81,7 +81,7 @@ System.out.println(unknown); // Output: null
 
 # Lesson Recap & Next Steps
 
-🎉 You've learned:
+  You've learned:
 1. `int` and `float` for numbers.
 2. `boolean` for logical values.
 3. `char` for single characters.
