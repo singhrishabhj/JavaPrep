@@ -29,7 +29,7 @@ System.out.println(a % b); // Output: 0
 ## Logical Operators
 Logical operators are used to make decisions based on conditions. They return either `true` or `false`.
 
-### Logical Operators in Java ('&&', '||', '!':
+### Logical Operators in Java ( `&&`, `||`, and, `!`)
 - `&&` (AND) – Returns `true` if **both** conditions are true.
 - `||` (OR) – Returns `true` if **at least one** condition is true.
 - `!` (NOT) – Reverses a boolean value (true becomes false, and vice versa).
