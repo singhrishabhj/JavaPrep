@@ -1,8 +1,8 @@
 # Getting Started with Java
 
 Welcome to your Java learning journey! This repository is structured to help you understand the core concepts of Java step by step. Below is an overview of each folder and what you can expect to learn from it.
----
 
+---
 ## Folder Structure
 
 ### **1. Java_Basics** 
@@ -31,11 +31,11 @@ Discover loops in Java, including `for`, `while`, and `do-while`, which allow re
 
 ### **9. Java_String_Concat** 
 Explore string concatenation in Java using `+`, `concat()`, and `StringBuilder` for efficient text manipulation.
+
 ---
-
-
 ## **Next Part: Learning Simple Data Structures in Java**
 The upcoming lessons will introduce fundamental data structures like **lists, stacks, and queues**, which help in managing and organizing data efficiently.
+
 ---
 ## Next Steps
 Once you're comfortable with these concepts and understand the flow of Java programming, you can move on to more advanced topics such as loops, arrays, object-oriented programming (OOP), exception handling, and beyond!
