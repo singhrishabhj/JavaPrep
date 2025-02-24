@@ -65,20 +65,18 @@ int overflow = maxInt + 1; // Causes overflow
 System.out.println(overflow); // Output: -2147483648 (Minimum int value, -2^31)
 ```
 Here, adding 1 to the maximum `int` value causes it to overflow to the smallest possible `int` value.
-
+> **Note:** When an `int` overflows, it wraps around to the smallest possible value.
 ---
 
-## Summary
-In this lesson, we learned:
-- Arithmetic operators (+, -, *, /, %) allow us to perform basic mathematical calculations.
-- Logical operators (&&, ||, !) help in making decisions based on conditions.
-- Integer overflow occurs when a value exceeds the data type’s limit, causing unexpected results.
+## Lesson Recap & Next Steps
 
+### What You've Learned:
+1. Arithmetic operations (`+`, `-`, `*`, `/`, `%`)
+2. Logical operations (`&&`, `||`, `!`)
+3. How to use these operators with variables
+4. Integer overflow and its effects
 
-## What You've Learned
-1. How to perform arithmetic operations in Java.
-2. How logical operators help in decision-making.
-3. How integer overflow can cause unexpected results.
+### Next Steps:
+In the next lesson, we will explore **Java Type Conversion** and how to handle different data types effectively. Keep coding and experimenting! 🚀
 
-Now that you understand these concepts, you can apply them in Java programs to perform calculations and control logic efficiently. Happy coding! 🚀
 
