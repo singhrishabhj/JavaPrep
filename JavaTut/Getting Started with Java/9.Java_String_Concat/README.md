@@ -28,7 +28,7 @@ System.out.println(fullName);
 Neil Armstrong
 ```
 
-> **Note:** Java automatically converts numbers to strings when using `+` with text.
+> 🔹 **Note:** Java automatically converts numbers to strings when using `+` with text.
 
 ### Example:
 ```java
@@ -61,7 +61,7 @@ System.out.println(result);
 Mission Success
 ```
 
-🔹> **Warning:** `concat()` does NOT work with numbers. You must convert them to strings first.
+> 🔹 **Warning:** `concat()` does NOT work with numbers. You must convert them to strings first.
 
 ---
 
@@ -81,7 +81,7 @@ System.out.println(log.toString());
 Astronaut Neil Armstrong is preparing for launch!
 ```
 
-🔹> **Note:** `StringBuilder` is preferred when performing **multiple concatenations**.
+> 🔹 **Note:** `StringBuilder` is preferred when performing **multiple concatenations**.
 
 ---
 
