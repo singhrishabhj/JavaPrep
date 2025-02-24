@@ -61,7 +61,7 @@ System.out.println(result);
 Mission Success
 ```
 
-> 🔹 **Warning:** `concat()` does NOT work with numbers. You must convert them to strings first.
+> ♦️ **Warning:** `concat()` does NOT work with numbers. You must convert them to strings first.
 
 ---
 
