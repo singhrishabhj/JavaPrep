@@ -64,9 +64,16 @@ class ReverseAnArray {
 
 // Sample Input and Output:
 
-// Input:
+// Input1:
 // 5
 // 1 2 3 4 5
 
-// Output:
+// Output1:
 // 5 4 3 2 1
+
+//Input2:
+// 6
+// 1 3 5 7 9 11
+
+// Output2:
+// 11 9 7 5 3 1
